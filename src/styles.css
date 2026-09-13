@@ -1,0 +1,194 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Design system — Bold Gradient portfolio.
+ * Dark, energetic, asymmetric. Coral + gold accents on deep indigo.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-coral: var(--coral);
+  --color-gold: var(--gold);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-ink-3: var(--ink-3);
+
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "Plus Jakarta Sans", sans-serif;
+}
+
+:root {
+  --radius: 1rem;
+
+  /* Deep indigo surfaces */
+  --ink: oklch(0.16 0.06 282);     /* #0f0c29 */
+  --ink-2: oklch(0.34 0.09 285);  /* #302b63 */
+  --ink-3: oklch(0.27 0.06 282);  /* #24243e */
+
+  --background: var(--ink);
+  --foreground: oklch(0.97 0.01 280);
+  --card: oklch(0.23 0.07 282);
+  --card-foreground: oklch(0.97 0.01 280);
+  --popover: oklch(0.21 0.07 282);
+  --popover-foreground: oklch(0.97 0.01 280);
+
+  /* Accents */
+  --coral: oklch(0.73 0.18 18);   /* #ff6b6b */
+  --gold: oklch(0.86 0.16 82);    /* #feca57 */
+
+  --primary: var(--coral);
+  --primary-foreground: oklch(0.16 0.06 282);
+  --secondary: var(--ink-3);
+  --secondary-foreground: oklch(0.97 0.01 280);
+  --muted: oklch(0.27 0.06 282);
+  --muted-foreground: oklch(0.72 0.03 282);
+  --accent: var(--gold);
+  --accent-foreground: oklch(0.16 0.06 282);
+  --destructive: oklch(0.65 0.24 27);
+  --destructive-foreground: oklch(0.98 0 0);
+  --border: oklch(1 0 0 / 12%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: var(--coral);
+}
+
+.dark {
+  /* The whole site is dark by design; keep parity. */
+  --background: var(--ink);
+  --foreground: oklch(0.97 0.01 280);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+
+  section[id] {
+    scroll-margin-top: 5rem;
+  }
+
+  ::selection {
+    background: var(--coral);
+    color: var(--ink);
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--ink);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--ink-2);
+    border-radius: 999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--coral);
+  }
+}
+
+@utility text-gradient-warm {
+  background: linear-gradient(120deg, var(--coral), var(--gold));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility bg-grid {
+  background-image:
+    linear-gradient(to right, oklch(1 0 0 / 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, oklch(1 0 0 / 0.04) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+@utility glass {
+  background: oklch(1 0 0 / 0.05);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid oklch(1 0 0 / 0.1);
+}
+
+@utility glow-coral {
+  box-shadow: 0 0 60px -12px oklch(0.73 0.18 18 / 0.55);
+}
+
+@utility glow-gold {
+  box-shadow: 0 0 60px -12px oklch(0.86 0.16 82 / 0.5);
+}
+
+@keyframes blob {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, -40px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.95); }
+}
+
+@utility animate-blob {
+  animation: blob 18s ease-in-out infinite;
+}
+
+@keyframes float-soft {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@utility animate-float {
+  animation: float-soft 6s ease-in-out infinite;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@utility animate-marquee {
+  animation: marquee 28s linear infinite;
+}
