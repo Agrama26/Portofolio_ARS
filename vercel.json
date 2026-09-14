@@ -1,5 +1,13 @@
 {
   "buildCommand": "bun run build",
-  "outputDirectory": ".output/public",
-  "framework": null
+  "outputDirectory": "dist/client",
+  "functions": {
+    "api/server.js": {
+      "includeFiles": "dist/server/**"
+    }
+  },
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/api/server" }
+  ]
 }
+
