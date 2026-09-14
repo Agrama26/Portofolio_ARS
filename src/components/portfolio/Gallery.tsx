@@ -1,11 +1,11 @@
 import { AnimatePresence, motion } from "motion/react";
 import { useCallback, useEffect, useState } from "react";
 import { PROFILE } from "@/lib/profile-data";
-import g1 from "@/assets/gallery-1.jpg";
-import g2 from "@/assets/gallery-2.jpg";
+import g1 from "@/assets/gallery-1.webp";
+import g2 from "@/assets/gallery-2.webp";
 import g3 from "@/assets/gallery-3.webp";
-import g4 from "@/assets/gallery-4.jpg";
-import g5 from "@/assets/gallery-5.jpg";
+import g4 from "@/assets/gallery-4.webp";
+import g5 from "@/assets/gallery-5.webp";
 
 const IMAGES = [g1, g2, g3, g4, g5];
 const STACK_TILTS = [-6, 4, -2, 7];

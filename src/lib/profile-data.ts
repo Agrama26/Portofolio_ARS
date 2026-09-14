@@ -1,4 +1,4 @@
-import profilImg from "@/assets/profil.jpeg";
+import profilImg from "@/assets/profil.webp";
 
 export const PROFILE = {
   name: "Agung Ramadhan Setiawan",
