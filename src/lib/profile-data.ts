@@ -89,6 +89,7 @@ export const PROFILE = {
     { title: "LP (Leadership Camp)", caption: "Momen pelatihan kepemimpinan GenBi di Takengon" },
     { title: "Pengabdian Masyarakat", caption: "Foto divisi pubsos pada kegiatan pengabdian masyarakat di desa sido mulyo" },
     { title: "Foto Pribadi", caption: "Foto sendiri" },
+    { title: "Bedah Buku GenBI", caption: "Foto saat acara bedah buku" },
   ],
   socials: [
     { label: "GitHub", href: "https://github.com/Agrama26", handle: "@Agrama26" },

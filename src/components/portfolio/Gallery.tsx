@@ -3,10 +3,11 @@ import { useCallback, useEffect, useState } from "react";
 import { PROFILE } from "@/lib/profile-data";
 import g1 from "@/assets/gallery-1.jpg";
 import g2 from "@/assets/gallery-2.jpg";
-import g3 from "@/assets/gallery-3.jpg";
+import g3 from "@/assets/gallery-3.webp";
 import g4 from "@/assets/gallery-4.jpg";
+import g5 from "@/assets/gallery-5.jpg";
 
-const IMAGES = [g1, g2, g3, g4];
+const IMAGES = [g1, g2, g3, g4, g5];
 const STACK_TILTS = [-6, 4, -2, 7];
 
 export default function Gallery() {
@@ -193,9 +194,8 @@ export default function Gallery() {
                   type="button"
                   onClick={() => setIndex(i)}
                   aria-label={`Lihat foto ${item.title}`}
-                  className={`h-2.5 rounded-full transition-all ${
-                    i === index ? "w-8 bg-gold" : "w-2.5 bg-white/40 hover:bg-white/70"
-                  }`}
+                  className={`h-2.5 rounded-full transition-all ${i === index ? "w-8 bg-gold" : "w-2.5 bg-white/40 hover:bg-white/70"
+                    }`}
                 />
               ))}
             </div>
