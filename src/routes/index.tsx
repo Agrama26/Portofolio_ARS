@@ -11,13 +11,13 @@ import Contact from "@/components/portfolio/Contact";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Agung Ramadhan Setiawan — Web Developer" },
+      { title: "Agung RS — Web Developer" },
       {
         name: "description",
         content:
           "Portofolio Agung Ramadhan Setiawan, Web Developer lulusan D4 Teknik Informatika Politeknik Negeri Lhokseumawe. Antarmuka web responsif, interaktif, dan rapi.",
       },
-      { property: "og:title", content: "Agung Ramadhan Setiawan — Web Developer" },
+      { property: "og:title", content: "Agung RS — Web Developer" },
       {
         property: "og:description",
         content:
