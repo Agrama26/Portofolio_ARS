@@ -73,7 +73,7 @@ export const PROFILE = {
       role: "Ketua Departemen Kesejahteraan Mahasiswa",
       org: "HIMATIK",
       period: "2024 — 2025",
-      type: "Himpunan Mahasiswa Teknik Informatika PNL",
+      type: "Himpunan Mahasiswa Jurusan Teknologi Informasi dan Komputer",
       desc: "Bertanggung jawab dalam merencanakan dan melaksanakan program kerja yang mendukung kesejahteraan mahasiswa Teknik Informatika, termasuk kegiatan sosial, pengembangan soft skill, dan program bantuan bagi mahasiswa yang membutuhkan.",
       achievements: [
         "Merencanakan dan melaksanakan program kerja departemen",
